@@ -142,7 +142,6 @@ jobs:
           docker buildx build \
             --platform linux/amd64,linux/arm64 \
             --push \
-            -t nppass_beta:latest \
             -t nppass_beta:${VERSION} \
             ./vite-frontend
 
@@ -186,8 +185,7 @@ jobs:
           docker buildx build \
             --platform linux/amd64,linux/arm64 \
             --push \
-            -t xbone01/nppass-server:latest \
-            -t xbone01/nppass-server:${VERSION} \
+            -t xbone01/nppass_beta-server:${VERSION} \
             ./springboot-backend
 
   create-release:
