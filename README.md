@@ -1,84 +1,37 @@
+## Nppass2.0转发面板
 
-# flux-panel转发面板 哆啦A梦转发面板
+基于gost 可视化转发面板
+<div align="center">
+  <img src="https://xcloud.hljone.com/f/X6Tj/Nppass.png" alt="Nppass Logo" width="200" style="border-radius: 20px; overflow: hidden;">
+</div>
 
-# 赞助商
-<p align="center">
-  <a href="https://vps.town" style="margin: 0 20px; text-align:center;">
-    <img src="./doc/vpstown.png" width="300">
-  </a>
-
-  <a href="https://whmcs.as211392.com" style="margin: 0 20px; text-align:center;">
-    <img src="./doc/as211392.png" width="300">
-  </a>
-</p>
-
-# 1.x无法无损升级到2.x请备份好数据
-1.x迁移2.x流程如下
-1.进入1.x的后台在转发页面导出所有转发保存
-2.使用1.x节点脚本卸载所有节点
-```
-curl -L https://github.com/bqlpfy/flux-panel/releases/download/1.4.2/install.sh -o install.sh && chmod +x install.sh && ./install.sh
-```
-3.使用1.x面版脚本卸载面板
-
-```
-curl -L https://github.com/bqlpfy/flux-panel/releases/download/1.4.2/panel_install.sh -o panel_install.sh && chmod +x panel_install.sh && ./panel_install.sh
-```
-4.使用2.x脚本安装面板
-
-```
-curl -L https://raw.githubusercontent.com/bqlpfy/flux-panel/refs/heads/main/panel_install.sh -o panel_install.sh && chmod +x panel_install.sh && ./panel_install.sh
-```
-
-
-使用1.x版本的请使用上面给出的脚本，不要使用最新的，最新的默认2.x
-嫌弃麻烦或者想稳定的我不推荐你升级到2.x版本 目前还在beta阶段，很多问题。
-
-
-本项目基于 [go-gost/gost](https://github.com/go-gost/gost) 和 [go-gost/x](https://github.com/go-gost/x) 两个开源库，实现了转发面板。
 ---
-## 特性
-
-- 支持按 **隧道账号级别** 管理流量转发数量，可用于用户/隧道配额控制
-- 支持 **TCP** 和 **UDP** 协议的转发
-- 支持两种转发模式：**端口转发** 与 **隧道转发**
-- 可针对 **指定用户的指定隧道进行限速** 设置
-- 支持配置 **单向或双向流量计费方式**，灵活适配不同计费模型
-- 提供灵活的转发策略配置，适用于多种网络场景
-
-
-## 部署流程
+## 文档地址：
+- [文档地址](https://planessr.github.io/Nppass)
 ---
+
 ### Docker Compose部署
 #### 快速部署
-面板端(1.x)：
+
+面板端管理脚本：
 ```bash
-curl -L https://github.com/bqlpfy/flux-panel/releases/download/1.4.2/panel_install.sh -o panel_install.sh && chmod +x panel_install.sh && ./panel_install.sh
-```
-节点端(1.x)：
-```bash
-curl -L https://github.com/bqlpfy/flux-panel/releases/download/1.4.2/install.sh -o install.sh && chmod +x install.sh && ./install.sh
+curl -L https://raw.githubusercontent.com/planessr/Nppass_beta/refs/heads/main/panel_install.sh -o panel_install.sh && chmod +x panel_install.sh && ./panel_install.sh
 
 ```
 
-面板端(2.x)：
+节点端管理脚本：
 ```bash
-curl -L https://raw.githubusercontent.com/bqlpfy/flux-panel/refs/heads/main/panel_install.sh -o panel_install.sh && chmod +x panel_install.sh && ./panel_install.sh
-```
-节点端(2.x)：
-```bash
-curl -L https://raw.githubusercontent.com/bqlpfy/flux-panel/refs/heads/main/install.sh -o install.sh && chmod +x install.sh && ./install.sh
+curl -L https://raw.githubusercontent.com/planessr/Nppass_beta/refs/heads/main/install.sh -o install.sh && chmod +x install.sh && ./install.sh
 
 ```
 
-#### 默认管理员账号
+#### 访问Web
 
+- **web**: http://your-server-ip:6366
 - **账号**: admin_user
 - **密码**: admin_user
 
 > ⚠️ 首次登录后请立即修改默认密码！
-
-
 ## 免责声明
 
 本项目仅供个人学习与研究使用，基于开源项目进行二次开发。  
@@ -102,16 +55,3 @@ curl -L https://raw.githubusercontent.com/bqlpfy/flux-panel/refs/heads/main/inst
 
 
 请务必在合法、合规、安全的前提下使用本项目。  
-
----
-## ⭐ 喝杯咖啡！（USDT）
-
-| 网络       | 地址                                                                 |
-|------------|----------------------------------------------------------------------|
-| BNB(BEP20) | `0x755492c03728851bbf855daa28a1e089f9aca4d1`                          |
-| TRC20      | `TYh2L3xxXpuJhAcBWnt3yiiADiCSJLgUm7`                                  |
-| Aptos      | `0xf2f9fb14749457748506a8281628d556e8540d1eb586d202cd8b02b99d369ef8`  |
-
-[![Star History Chart](https://api.star-history.com/svg?repos=bqlpfy/flux-panel&type=Date)](https://www.star-history.com/#bqlpfy/flux-panel&Date)
-
-
