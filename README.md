@@ -1,4 +1,4 @@
-## Nppass2.0转发面板
+## Nppass2.0
 
 基于gost 可视化转发面板
 <div align="center">
