@@ -25,7 +25,7 @@ const getInitialConfig = () => {
       };
     }
   return {
-    name: "flux",
+    name: "Nppass2.0",
     version: VERSION,
     app_version: APP_VERSION,
   };
