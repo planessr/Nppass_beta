@@ -2,7 +2,7 @@ name: Build and Push Images Based on Version
 
 # 在这里定义统一版本号
 env:
-  VERSION: "2.0.7-beta"
+  VERSION: "2.0.0-beta"
 
 on:
   push:
@@ -142,7 +142,7 @@ jobs:
           docker buildx build \
             --platform linux/amd64,linux/arm64 \
             --push \
-            -t nppass_beta:${VERSION} \
+            -t xbone01/nppass_beta:${VERSION} \
             ./vite-frontend
 
   build-java:
